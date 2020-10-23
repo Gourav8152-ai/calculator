@@ -1,33 +1,29 @@
-print("Simple Calculator")
-print("1.Add")
-print("2.Substract")
-print("3.Multiply")
-print("4.Divide")
-print("5.Square")
-print("6.Power")
-print("7.Square Root")
-print("8.Odd/Even")
-print("9.Check if Prime")
-print("10.Quit")
+opciones = ["Simple Calculator","1.Add","2.Substract","3.Multiply","4.Divide",
+             "5.Square","6.Power","7.Square Root","8.Odd/Even","9.Check if Prime"
+            ,"10.Quit"]
+
+[print(valor) for valor in opciones ]
+
+def Read_two_Values():
+    number1 = float(input("Enter first number: "))
+    number2 = float(input("Enter second number: "))
+    return number1,number2
+
 while True:
     option = int(input("Enter a number to excute operation:  "))
     if option == 10:
         break
     elif option == 1:
-        number1 = float(input("Enter first number: "))
-        number2 = float(input("Enter second number: "))
+        number1,number2 = Read_two_Values()
         print(number1 + number2)
     elif option == 2:
-        number1 = float(input("Enter first number: "))
-        number2 = float(input("Enter second number: "))
+        number1,number2 = Read_two_Values()
         print(number1 - number2)
     elif option == 3:
-        number1 = float(input("Enter first number: "))
-        number2 = float(input("Enter second number: "))
+        number1,number2 = Read_two_Values()
         print(number1 * number2)
     elif option == 4:
-        number1 = float(input("Enter first number: "))
-        number2 = float(input("Enter second number: "))
+        number1,number2 = Read_two_Values()
         print(number1 / number2)
     elif option == 5:
         number1 = float(input("Enter a number: "))
@@ -47,10 +43,8 @@ while True:
             print("Odd")
     elif option == 9:
         def prime_no(n) :
-            if (n <= 1) :
+            if (n <= 1 or n <= 3 ) :
                 return False
-            if (n <= 3) :
-                return True
             if (n % 2 == 0 or n % 3 == 0) :
                 return False
             temp = 5
@@ -72,3 +66,4 @@ while True:
     else :
         print("Invalid Input")
 print("EXIT")
+
