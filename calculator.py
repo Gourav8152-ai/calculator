@@ -37,7 +37,10 @@ while True:
     elif option == 4:
         number1 = float(input("Enter first number: "))
         number2 = float(input("Enter second number: "))
-        print(number1 / number2)
+        if num2 == 0:
+            print('Undefined')
+        else:
+            print(number1 / number2)
     
     elif option == 5:
         number1 = float(input("Enter a number: "))
@@ -46,11 +49,17 @@ while True:
     elif option == 6:
         number1 = float(input("Enter the number to find its value: "))
         number2 = float(input("Enter a value of power: "))
-        print(number1 ** number2)
+        if number1 == 0 and number2 == 0:
+            print('Undefined')
+        else:
+            print(number1 ** number2)
     
     elif option == 7:
         number1 = float(input("Enter a number: "))
-        print(number1 ** 0.5)
+        if number1 < 0:
+            print('Undefined')
+        else:
+            print(number1 ** 0.5)
     
     elif option == 8:
         number1 = float(input("Enter a number: "))
