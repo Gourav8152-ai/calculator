@@ -1,22 +1,23 @@
 import math
 
-print("Simple Calculator")
-print("1.Add")
-print("2.Substract")
-print("3.Multiply")
-print("4.Divide")
-print("5.Square")
-print("6.Power")
-print("7.Square Root")
-print("8.Odd/Even")
-print("9.Check if Prime")
-print("10.Log")
-print("11.Quit")
+print("""Simple Calculator
+1. Add
+2. Substract
+3. Multiply
+4. Divide
+5. Square
+6. Power
+7. Square Root
+8. Odd/Even
+9. Check if Prime
+10. Log
+11. Remainder
+12. Quit""")
 
 while True:
-    option = int(input("Enter a number to excute operation:  "))
+    option = int(input("Enter a number to excute operation: "))
 
-    if option == 11:
+    if option == 12:
         break
 
     elif option == 1:
@@ -88,6 +89,11 @@ while True:
         log  = math.log(x, base)
         print(f"\nLog {base} ({x}) = {log:.2f}\n")
 
+    elif option == 11:
+        numerator   = float(input("\nEnter number to be divided: "))
+        denominator = float(input("Enter number to be divide by: "))
+        remainder   = numerator % denominator
+        print(f"\nRemainder {numerator}/{denominator} = {remainder}\n")
     else :
         print("Invalid Input")
 
